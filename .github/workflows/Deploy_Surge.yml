@@ -1,0 +1,23 @@
+# Install NodeJS
+- name: Install NodeJS
+  uses: actions/setup-node@v2-beta
+  with:
+    node-version: 12
+
+# Install Yarn
+uses: borales/actions-yarn@v2.0.0
+with:
+  cmd: install
+
+# Build react app with yarn
+- name: build react app
+  run: yarn build
+  
+# install surge
+- name: Install Surge
+  run: np install --global surge
+
+# deploy surge
+- name: Deploy react app to surge
+  run: surge ./build project002-shahjahansamoon.surge.sh --token ${{ secrets.surge_token }} 
+   
