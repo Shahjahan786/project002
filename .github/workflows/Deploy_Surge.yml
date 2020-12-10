@@ -6,9 +6,9 @@
 
 # Install Yarn
 - name: Install Yarn
-uses: borales/actions-yarn@v2.0.0
-with:
-  cmd: install
+  uses: borales/actions-yarn@v2.0.0
+  with:
+    cmd: install
 
 # Build react app with yarn
 - name: build react app
