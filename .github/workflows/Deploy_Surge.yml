@@ -18,6 +18,9 @@
 - name: Install Surge
   run: np install --global surge
 
+- name: Build React App
+  run: yarn build
+
 # deploy surge
 - name: Deploy react app to surge
   run: surge ./build project002-shahjahansamoon.surge.sh --token ${{ secrets.surge_token }} 
