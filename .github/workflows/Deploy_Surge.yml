@@ -5,6 +5,7 @@
     node-version: 12
 
 # Install Yarn
+- name: Install Yarn
 uses: borales/actions-yarn@v2.0.0
 with:
   cmd: install
